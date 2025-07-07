@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="bg-card">
+    <section id="certifications" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Accreditations & Certifications</h2>
