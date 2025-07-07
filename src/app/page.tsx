@@ -55,17 +55,19 @@ export default function Home() {
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.slice(0, 3).map((service) => (
-              <Card key={service.title} className="flex flex-col text-center items-center">
-                <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
-                    <service.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="font-headline">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{service.shortDescription}</p>
-                </CardContent>
-              </Card>
+              <Link key={service.slug} href={`/services/${service.slug}`} className="group">
+                <Card className="flex flex-col text-center items-center h-full transition-all group-hover:shadow-lg group-hover:-translate-y-1">
+                  <CardHeader>
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
+                      <service.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{service.shortDescription}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
           <div className="mt-12 text-center">
@@ -88,7 +90,7 @@ export default function Home() {
           </div>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto">
             {whyChooseUs.map((feature) => (
-              <Card key={feature.title} className="flex flex-col text-center items-center">
+              <Card key={feature.title} className="flex flex-col text-center items-center transition-all hover:shadow-lg hover:-translate-y-1">
                 <CardHeader>
                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
                     <feature.icon className="h-8 w-8 text-primary" />

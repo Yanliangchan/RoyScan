@@ -26,13 +26,13 @@ const Logo = () => (
       cy="50"
       rx="48"
       ry="45"
-      stroke="#D42A2A"
+      stroke="hsl(var(--primary))"
       strokeWidth="4"
       fill="none"
     />
     <text
       x="50%"
-      y="50%"
+      y="52%"
       dominantBaseline="middle"
       textAnchor="middle"
       fill="hsl(var(--primary))"
@@ -64,7 +64,7 @@ export default function AppHeader() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled || isMobileMenuOpen ? "bg-card/80 backdrop-blur-lg border-b" : "bg-card/0"
+      isScrolled || isMobileMenuOpen ? "bg-card/80 backdrop-blur-lg border-b" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
@@ -101,7 +101,17 @@ export default function AppHeader() {
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
-                    <Link key={link.href} href={link.href} className="text-lg font-medium" onClick={closeMobileMenu}>
+                     <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMobileMenu}
+                      className={cn(
+                        "rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                        pathname.startsWith(link.href)
+                          ? "bg-accent text-accent-foreground"
+                          : "text-muted-foreground"
+                      )}
+                    >
                       {link.label}
                     </Link>
                   ))}

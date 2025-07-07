@@ -25,7 +25,7 @@ export default function HeroSection() {
             Royscan Engineering delivers unparalleled Non-Destructive Testing solutions, ensuring the integrity and safety of your critical assets with cutting-edge technology and expert analysis.
           </p>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-            <Button asChild size="lg" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="hover:opacity-90">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/services">Our Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
