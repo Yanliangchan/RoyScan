@@ -1,4 +1,4 @@
-import { FlaskConical, Magnet, Gem, Waves, Radiation, ShieldCheck, BadgeCheck } from "lucide-react";
+import { FlaskConical, Magnet, Gem, Waves, Radiation, ShieldCheck, BadgeCheck, Flame, Layers } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface Service {
@@ -13,55 +13,57 @@ export const services: Service[] = [
   {
     slug: "dye-penetrant-testing",
     title: "Dye Penetrant Testing",
-    shortDescription: "Detects surface-breaking defects in non-porous materials using liquid penetrant.",
-    longDescription: `Dye Penetrant Testing (DPT), also known as Liquid Penetrant Inspection (LPI), is a widely applied and low-cost inspection method used to locate surface-breaking defects in all non-porous materials (metals, plastics, or ceramics). The penetrant may be applied to all non-ferrous materials and ferrous materials, although for ferrous components magnetic-particle inspection is often used instead for its subsurface detection capability.
-
-This method is used to detect casting, forging and welding surface defects such as hair-line cracks, surface porosity, leaks in new products, and fatigue cracks on in-service components.`,
+    shortDescription: "A sensitive method to find surface-breaking defects on non-porous materials without causing harm.",
+    longDescription: `Liquid Penetrant Testing, also known as Dye Penetrant Testing (DPT), is a non-destructive test method that does not harm the samples or parts being tested. This test is used to find surface-breaking discontinuities on relatively smooth, nonporous surfaces. It is highly effective in detecting casting, forging, and welding surface defects such as hairline cracks, surface porosity, leaks in new products, and fatigue cracks on in-service components. It is a sensitive and reliable test method.`,
     icon: FlaskConical,
   },
   {
     slug: "magnetic-particle-testing",
     title: "Magnetic Particle Testing",
-    shortDescription: "Identifies surface and near-surface discontinuities in ferromagnetic materials.",
-    longDescription: `Magnetic Particle Testing (MPT) is a non-destructive testing process for detecting surface and slightly subsurface discontinuities in ferromagnetic materials such as iron, nickel, cobalt, and some of their alloys. The process puts a magnetic field into the part.
-
-The piece can be magnetized by direct or indirect magnetization. Direct magnetization occurs when the electric current is passed through the test object and a magnetic field is formed in the material. Indirect magnetization occurs when no electric current is passed through the test object, but a magnetic field is applied from an outside source. The magnetic particles are applied over a surface, and where there is a crack or a flaw, the magnetic field 'leaks' from the steel. The particles are attracted to the leakage field and cluster to form an indication directly over the discontinuity.`,
+    shortDescription: "Detects surface and near-surface flaws in ferromagnetic materials using magnetic fields and particles.",
+    longDescription: `Magnetic Particle Testing (MPT) is a method used to find surface and near-surface flaws in ferromagnetic materials like steel and iron. The process involves creating a magnetic field in the part and applying wet or dry magnetic particles to the surface. Any flaws will create a leakage field, attracting the particles and forming an indication. This indication is then evaluated against applicable acceptance standards to determine the integrity of the component.`,
     icon: Magnet,
-  },
-  {
-    slug: "hardness-testing",
-    title: "Hardness Testing",
-    shortDescription: "Measures material resistance to localized plastic deformation such as a scratch or indentation.",
-    longDescription: `Hardness testing is a crucial method for determining a material's resistance to localized plastic deformation, such as a scratch or indentation. This test plays a vital role in materials testing, quality control, and acceptance of components.
-
-We perform various types of hardness tests, including Rockwell, Brinell, and Vickers, to suit different materials and application requirements. The data from hardness tests can be used to assess material properties, such as tensile strength and wear resistance, ensuring that materials meet the necessary specifications for their intended use.`,
-    icon: Gem,
-  },
-  {
-    slug: "ultrasonic-testing",
-    title: "Ultrasonic Testing",
-    shortDescription: "Uses high-frequency sound waves to detect internal flaws or characterize materials.",
-    longDescription: `Ultrasonic Testing (UT) uses high-frequency sound waves to conduct examinations and make measurements. Ultrasonic inspection can be used for flaw detection/evaluation, dimensional measurements, material characterization, and more.
-
-A key advantage of UT is its ability to detect internal flaws, making it essential for inspecting welds, castings, and composites. We utilize advanced UT techniques, including phased array ultrasonic testing (PAUT) and time-of-flight diffraction (TOFD), to provide comprehensive and accurate results for your critical components.`,
-    icon: Waves,
   },
   {
     slug: "radiography-testing",
     title: "Radiography Testing",
-    shortDescription: "Inspects materials for hidden flaws by using X-rays and gamma rays to see inside.",
-    longDescription: `Radiography Testing (RT) is a non-destructive testing method that uses X-rays or gamma rays to view the internal structure of a component. RT is widely used for inspecting welds, castings, and forged components to detect hidden flaws such as porosity, cracks, and inclusions.
-
-The process involves placing the test object between the radiation source and a detector (or film). The resulting shadowgraph shows the internal features and any discontinuities. Our certified radiographers ensure that all inspections are performed safely and in accordance with industry standards to provide clear and reliable results.`,
+    shortDescription: "Examines the internal structure of components using X-rays or gamma rays to find hidden defects.",
+    longDescription: `Radiographic Testing (RT) is a non-destructive test method that uses either X-rays or gamma rays to examine the internal structure of manufactured components. As a volumetric inspection method, it is highly sensitive to changes in thickness, voids, and variations in material density. RT is widely used to inspect castings, forgings, and weldments for internal defects, providing a clear picture of the material's integrity without causing damage.`,
     icon: Radiation,
+  },
+  {
+    slug: "ultrasonic-testing",
+    title: "Ultrasonic Testing",
+    shortDescription: "Uses high-frequency sound waves for volumetric examination to detect internal flaws and measure dimensions.",
+    longDescription: `Ultrasonic Testing (UT) is a versatile NDT method that utilizes high-frequency sound energy to conduct examinations and make precise measurements. It is a volumetric examination technique, meaning it can detect internal flaws within a component. UT is commonly used for a wide range of applications, including flaw detection and evaluation, dimensional measurements, material characterization, and is particularly effective for weld inspection, as well as inspecting castings, forgings, and composites.`,
+    icon: Waves,
+  },
+  {
+    slug: "ultrasonic-thickness-gauging",
+    title: "Ultrasonic Thickness Gauging",
+    shortDescription: "Measures material thickness from one side to detect corrosion or damage.",
+    longDescription: `Ultrasonic Thickness Gauging (UTG) is a non-destructive testing method used to inspect the thickness of a solid material by accessing it from only one side. This technique is fast, reliable, and versatile, making it an essential tool for quality control and maintenance. It is commonly used to measure wall thickness and to detect corrosion, erosion, and other damages on a material. UTG can be applied to a wide range of materials, including metals, plastics, ceramics, and composites.`,
+    icon: Layers,
+  },
+  {
+    slug: "hardness-testing",
+    title: "Hardness Testing",
+    shortDescription: "Measures material resistance to plastic deformation, ensuring quality control with portable testing equipment.",
+    longDescription: `Hardness Testing is a method used to determine the resistance of a material to plastic deformation from a standard source. It is primarily used on metals as a crucial part of the quality control process, ensuring that components meet their required specifications. At Royscan, we utilize a portable hardness tester, allowing us to perform highly accurate hardness testing at any location, providing flexibility and convenience for our clients.`,
+    icon: Gem,
+  },
+  {
+    slug: "post-weld-heat-treatment",
+    title: "Post Weld Heat Treatment",
+    shortDescription: "Reduces residual stresses and improves material ductility after welding.",
+    longDescription: `Post Weld Heat Treatment (PWHT) is a controlled process where a welded material is heated to a specific temperature below its lower critical transformation point and held for a specified duration. The primary purpose of this treatment is to reduce residual stresses introduced during welding, thereby maintaining material strength and significantly enhancing ductility. We provide comprehensive PWHT services for a wide range of materials and component sizes.`,
+    icon: Flame,
   },
   {
     slug: "welding-inspection",
     title: "Welding Inspection",
     shortDescription: "Ensures that welds meet all code and standard requirements for quality and safety.",
-    longDescription: `Welding inspection is a critical process to ensure the quality, integrity, and safety of welded structures. Our certified welding inspectors (CWIs) perform visual inspections and oversee other NDE methods to verify that welds meet all applicable codes, standards, and specifications.
-
-This includes checking for proper joint preparation, monitoring welding parameters, and inspecting the final weld for any defects. A thorough welding inspection program is essential for preventing failures in critical components across various industries, from construction to aerospace.`,
+    longDescription: `Welding inspection is a critical process to ensure the quality, integrity, and safety of welded structures. Our certified welding inspectors (CWIs) perform visual inspections and oversee other NDE methods to verify that welds meet all applicable codes, standards, and specifications. This includes checking for proper joint preparation, monitoring welding parameters, and inspecting the final weld for any defects. A thorough welding inspection program is essential for preventing failures in critical components across various industries, from construction to aerospace.`,
     icon: ShieldCheck,
   },
 ];
