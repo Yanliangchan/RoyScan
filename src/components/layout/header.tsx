@@ -39,22 +39,13 @@ export default function AppHeader() {
         <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
           <svg
             className="h-8 w-8"
-            viewBox="0 0 200 120"
+            viewBox="0 0 100 100"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <ellipse cx="100" cy="60" rx="98" ry="58" fill="#D42A2A" />
-            <text
-              fill="#000080"
-              fontFamily="Arial, sans-serif"
-              fontSize="80"
-              fontWeight="bold"
-              textAnchor="middle"
-              x="100"
-              y="85"
-            >
-              RS
-            </text>
+            <circle cx="50" cy="50" r="50" fill="#D42A2A" />
+            <circle cx="50" cy="50" r="25" fill="white" />
+            <circle cx="50" cy="50" r="15" fill="hsl(var(--primary))" />
           </svg>
           <span className="text-xl font-bold font-headline text-primary">Royscan Engineering</span>
         </Link>
@@ -85,24 +76,15 @@ export default function AppHeader() {
                 <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
                   <svg
                     className="h-8 w-8"
-                    viewBox="0 0 200 120"
+                    viewBox="0 0 100 100"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <ellipse cx="100" cy="60" rx="98" ry="58" fill="#D42A2A" />
-                    <text
-                      fill="#000080"
-                      fontFamily="Arial, sans-serif"
-                      fontSize="80"
-                      fontWeight="bold"
-                      textAnchor="middle"
-                      x="100"
-                      y="85"
-                    >
-                      RS
-                    </text>
+                    <circle cx="50" cy="50" r="50" fill="#D42A2A" />
+                    <circle cx="50" cy="50" r="25" fill="white" />
+                    <circle cx="50" cy="50" r="15" fill="hsl(var(--primary))" />
                   </svg>
-                  <span className="text-xl font-bold font-headline text-primary">Royscan</span>
+                  <span className="text-xl font-bold font-headline text-primary">Royscan Engineering</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
