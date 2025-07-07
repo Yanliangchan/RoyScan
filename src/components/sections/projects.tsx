@@ -59,6 +59,8 @@ const groupedProjects = projectsList.reduce((acc, project) => {
 
 
 export default function ProjectsSection() {
+  const sortedClients = Object.entries(groupedProjects).sort(([, projectsA], [, projectsB]) => projectsB.length - projectsA.length);
+
   return (
     <section id="projects">
       <div className="container mx-auto px-4 md:px-6">
@@ -69,7 +71,7 @@ export default function ProjectsSection() {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-            {Object.entries(groupedProjects).map(([client, projects]) => (
+            {sortedClients.map(([client, projects]) => (
                 <Card key={client} className="flex flex-col transition-all hover:shadow-lg">
                     <CardHeader>
                         <CardTitle className="font-headline text-xl flex items-center gap-3">
