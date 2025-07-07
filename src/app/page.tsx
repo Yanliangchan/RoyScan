@@ -46,9 +46,9 @@ export default function Home() {
                 </div>
                 <div className="flex justify-center">
                     <Image
-                        src="https://placehold.co/600x450.png"
+                        src="https://firebasestudio-hosting.web.app/projects/eMPxemqX/images/3m7a4j6t.png"
                         alt="Engineers collaborating on a project"
-                        data-ai-hint="engineers collaboration"
+                        data-ai-hint="engineers inspection"
                         width={600}
                         height={450}
                         className="rounded-lg shadow-xl"
