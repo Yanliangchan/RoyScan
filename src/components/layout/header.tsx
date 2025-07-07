@@ -6,17 +6,19 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Wrench } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#certifications', label: 'Certifications' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#team', label: 'Our Team' },
+  { href: '/services', label: 'Services' },
+  { href: '/certifications', label: 'Certifications' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/team', label: 'Our Team' },
 ];
 
 export default function AppHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +33,7 @@ export default function AppHeader() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "bg-card/80 backdrop-blur-lg border-b" : "bg-transparent"
+      isScrolled || isMobileMenuOpen ? "bg-card/80 backdrop-blur-lg border-b" : "bg-card/0"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
@@ -40,14 +42,20 @@ export default function AppHeader() {
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+            <Link 
+              key={link.href} 
+              href={link.href} 
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-foreground",
+                pathname.startsWith(link.href) ? "text-foreground" : "text-foreground/60"
+              )}>
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="hidden md:block">
           <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="hover:opacity-90">
-            <Link href="#contact">Contact Us</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -72,7 +80,7 @@ export default function AppHeader() {
                   ))}
                 </nav>
                 <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="hover:opacity-90 mt-4" onClick={closeMobileMenu}>
-                    <Link href="#contact">Contact Us</Link>
+                    <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
             </SheetContent>

@@ -7,11 +7,17 @@ export default function AppFooter() {
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} Royscan Engineering Pte Ltd. All rights reserved.
         </p>
-        <nav className="flex gap-4 sm:gap-6">
-          <Link href="#services" className="text-sm hover:underline">
+        <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <Link href="/services" className="text-sm hover:underline">
             Services
           </Link>
-          <Link href="#contact" className="text-sm hover:underline">
+          <Link href="/certifications" className="text-sm hover:underline">
+            Certifications
+          </Link>
+          <Link href="/projects" className="text-sm hover:underline">
+            Projects
+          </Link>
+          <Link href="/contact" className="text-sm hover:underline">
             Contact
           </Link>
         </nav>

@@ -1,30 +1,26 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Building, Plane, Ship, Pipeline } from 'lucide-react';
 
 const projectsList = [
   {
     title: "Offshore Platform Inspection",
     client: "Marine Oil & Gas Co.",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "oil rig"
+    icon: Building
   },
   {
     title: "Aerospace Component Analysis",
     client: "AeroSpace Dynamics",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "airplane engine"
+    icon: Plane
   },
   {
     title: "Ship Hull Integrity Testing",
     client: "Global Maritime Services",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "ship hull"
+    icon: Ship
   },
   {
     title: "Pipeline Weld Examination",
     client: "PetroChem Industries",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "industrial pipeline"
+    icon: Pipeline
   }
 ];
 
@@ -38,20 +34,13 @@ export default function ProjectsSection() {
             A glimpse into the diverse and critical projects we've successfully undertaken.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
           {projectsList.map((project) => (
-            <Card key={project.title} className="overflow-hidden transition-all hover:shadow-xl">
-              <CardHeader className="p-0">
-                <Image
-                  src={project.imageUrl}
-                  alt={`Image of ${project.title}`}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover aspect-[3/2]"
-                  data-ai-hint={project.aiHint}
-                />
-              </CardHeader>
-              <CardContent className="p-6">
+            <Card key={project.title} className="overflow-hidden transition-all hover:shadow-xl flex flex-col sm:flex-row items-center">
+                <div className="p-6 bg-primary/10 w-full sm:w-auto self-stretch flex items-center justify-center">
+                    <project.icon className="h-12 w-12 text-primary mx-auto"/>
+                </div>
+              <CardContent className="p-6 flex-1">
                 <CardTitle className="font-headline text-xl mb-2">{project.title}</CardTitle>
                 <p className="text-muted-foreground">Client: <span className="font-medium text-foreground">{project.client}</span></p>
               </CardContent>

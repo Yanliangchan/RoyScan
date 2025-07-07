@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { User } from "lucide-react";
 
 const teamMembers = [
   { name: "Palika Gowrisanthosh", title: "Managing Director", avatar: "PG" },
@@ -23,8 +24,9 @@ export default function TeamSection() {
             <Card key={member.name} className="text-center">
               <CardHeader className="items-center">
                 <Avatar className="h-24 w-24 mb-4">
-                  <AvatarImage src={`https://placehold.co/100x100.png`} alt={member.name} data-ai-hint="professional headshot" />
-                  <AvatarFallback className="text-2xl bg-primary text-primary-foreground">{member.avatar}</AvatarFallback>
+                  <AvatarFallback className="text-2xl bg-primary text-primary-foreground">
+                    {member.avatar}
+                  </AvatarFallback>
                 </Avatar>
                 <CardTitle className="font-headline text-lg">{member.name}</CardTitle>
               </CardHeader>

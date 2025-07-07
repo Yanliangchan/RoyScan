@@ -1,6 +1,8 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import AppHeader from '@/components/layout/header';
+import AppFooter from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'Royscan Engineering - NDE Solutions',
@@ -23,7 +25,11 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <div className="relative flex min-h-screen flex-col">
-            {children}
+            <AppHeader />
+            <main className="flex-1">
+              {children}
+            </main>
+            <AppFooter />
         </div>
         <Toaster />
         </body>

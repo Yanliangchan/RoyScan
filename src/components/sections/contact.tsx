@@ -9,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import Image from "next/image";
 import { MapPin, Phone, Mail, Building } from 'lucide-react';
 
 const formSchema = z.object({
@@ -56,9 +55,6 @@ export default function ContactSection() {
                      <p className="flex items-center gap-3"><Mail className="h-5 w-5 text-primary" /><span>sales@royscan.com.sg</span></p>
                 </CardContent>
              </Card>
-             <div className="overflow-hidden rounded-lg">
-                <Image src="https://placehold.co/600x400.png" alt="Map of Royscan locations" width={600} height={400} className="w-full" data-ai-hint="singapore map" />
-             </div>
           </div>
           <div>
             <Card>
