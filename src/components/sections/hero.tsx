@@ -19,10 +19,10 @@ export default function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="flex flex-col justify-center space-y-4 max-w-3xl mx-auto">
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
-            Premier NDE & Inspection Services
+            Engineering Integrity, Assured.
           </h1>
           <p className="max-w-[600px] mx-auto text-foreground/80 md:text-xl">
-            Ensuring the integrity and safety of your critical assets with cutting-edge technology and expert analysis.
+            We deliver premier NDE & inspection services to safeguard your most critical assets with unmatched precision and reliability.
           </p>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
