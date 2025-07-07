@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, Plane, Ship, Pipeline } from 'lucide-react';
+import { Building, Plane, Ship, Factory } from 'lucide-react';
 
 const projectsList = [
   {
@@ -20,7 +20,7 @@ const projectsList = [
   {
     title: "Pipeline Weld Examination",
     client: "PetroChem Industries",
-    icon: Pipeline
+    icon: Factory
   }
 ];
 
