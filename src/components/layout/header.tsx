@@ -53,11 +53,7 @@ export default function AppHeader() {
             </Link>
           ))}
         </nav>
-        <div className="hidden md:block">
-          <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="hover:opacity-90">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-        </div>
+        
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -79,9 +75,6 @@ export default function AppHeader() {
                     </Link>
                   ))}
                 </nav>
-                <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="hover:opacity-90 mt-4" onClick={closeMobileMenu}>
-                    <Link href="/contact">Contact Us</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>

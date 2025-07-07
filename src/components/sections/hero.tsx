@@ -18,7 +18,7 @@ export default function HeroSection() {
                 <Link href="/services">Our Services</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/contact">Get a Quote</Link>
+                <Link href="/team">Contact Our Team</Link>
               </Button>
             </div>
           </div>
