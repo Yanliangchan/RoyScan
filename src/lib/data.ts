@@ -1,4 +1,4 @@
-import { FlaskConical, Magnet, Gem, Waves, Radiation, ShieldCheck, BadgeCheck, Flame, Layers } from "lucide-react";
+import { FlaskConical, Magnet, Gem, Waves, Radiation, ShieldCheck, BadgeCheck, Flame, Layers, Users, Building2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface Service {
@@ -78,31 +78,52 @@ export interface Certification {
 
 export const certifications: Certification[] = [
     {
-        slug: "singlas",
-        title: "SINGLAS",
-        shortDescription: "Singapore Laboratory Accreditation Scheme.",
-        longDescription: "The Singapore Laboratory Accreditation Scheme (SINGLAS) is the national accreditation body for laboratories and inspection bodies. Accreditation by SINGLAS signifies that Royscan Engineering has met internationally recognized standards of technical competency and quality management. This ensures that our testing and calibration services are precise, reliable, and meet the stringent requirements of our clients and regulatory authorities.",
+        slug: "iso-17025",
+        title: "ISO/IEC 17025 Accreditation",
+        shortDescription: "SAC-SINGLAS accredited laboratory for technical competence.",
+        longDescription: "Accredited under the Singapore Laboratory Accreditation Scheme (SAC-SINGLAS) to the ISO/IEC 17025:2017 standard. This demonstrates our technical competence in laboratory testing and our ability to generate precise, accurate, and reliable test data, ensuring the highest level of quality assurance for our clients.",
         icon: BadgeCheck,
     },
     {
-        slug: "dnv",
-        title: "DNV",
-        shortDescription: "Det Norske Veritas.",
-        longDescription: "DNV is an independent expert in risk management and quality assurance, renowned for its work in the maritime, oil and gas, and energy industries. Our DNV certification demonstrates our capability to provide services that meet the high standards of safety, quality, and environmental performance required for offshore and marine assets. This accreditation is crucial for clients operating in these demanding sectors, providing confidence in our inspection and testing services.",
+        slug: "iso-9001",
+        title: "ISO 9001:2015 Certification",
+        shortDescription: "Certified for quality management systems by Socotec.",
+        longDescription: "Our ISO 9001:2015 certification from Socotec affirms our commitment to a robust quality management system. This ensures that our processes are standardized, efficient, and focused on continual improvement, consistently delivering services that meet and exceed customer expectations and regulatory requirements.",
         icon: BadgeCheck,
     },
     {
-        slug: "abs",
-        title: "ABS",
-        shortDescription: "American Bureau of Shipping.",
-        longDescription: "The American Bureau of Shipping (ABS) is a global leader in providing classification services to the marine and offshore industries. ABS approval confirms that our services, procedures, and facilities comply with their established rules and standards for the design, construction, and operational maintenance of marine vessels and offshore structures. This certification is a testament to our commitment to safety and excellence in the maritime sector.",
+        slug: "bizsafe-level-4",
+        title: "bizSAFE Level 4",
+        shortDescription: "Certified for workplace safety and health management.",
+        longDescription: "Achieving bizSAFE Level 4 certification from the Workplace Safety and Health (WSH) Council signifies our capability in implementing a comprehensive WSH management system. This reflects our deep commitment to maintaining the highest standards of safety and health for our employees, clients, and partners on every project.",
         icon: BadgeCheck,
     },
     {
-        slug: "asmi",
-        title: "ASMI",
-        shortDescription: "Association of Singapore Marine Industries.",
-        longDescription: "As a member of the Association of Singapore Marine Industries (ASMI), Royscan Engineering is part of a collective body representing the interests of the marine and offshore engineering sector in Singapore. This affiliation keeps us at the forefront of industry developments, best practices, and technological advancements. It underscores our role as a key service provider within Singapore's vibrant maritime ecosystem, committed to supporting the industry's growth and success.",
+        slug: "dnv-approved",
+        title: "DNV Approved Service Supplier",
+        shortDescription: "Approved for NDT on offshore units and ships by DNV.",
+        longDescription: "Recognized by DNV as an approved service supplier under their class programme DNV-CP-0640. This certification validates our competence to perform non-destructive testing on ships, high-speed and light craft, and mobile offshore units, adhering to DNV's stringent international standards for the maritime and offshore industries.",
         icon: BadgeCheck,
+    },
+    {
+        slug: "abs-recognized",
+        title: "ABS Recognised Service Supplier",
+        shortDescription: "Recognized by the American Bureau of Shipping.",
+        longDescription: "As a service supplier recognized by the American Bureau of Shipping (ABS), we are authorized to perform specific tests and inspections on ABS-classed vessels and offshore structures. This recognition underscores our technical expertise and adherence to the high safety and quality standards set by one of the world's leading classification societies.",
+        icon: BadgeCheck,
+    },
+    {
+        slug: "aspri-member",
+        title: "ASPRI Corporate Member",
+        shortDescription: "Member of the Association of Process Industry.",
+        longDescription: "Our corporate membership with the Association of Process Industry (ASPRI) connects us to the heart of Singapore's process sector. This affiliation enables us to stay current with industry best practices, safety standards, and technological advancements, reinforcing our position as a trusted partner for plant owners in the petroleum, chemical, and pharmaceutical industries.",
+        icon: Users,
+    },
+    {
+        slug: "asmi-member",
+        title: "ASMI Associate Member",
+        shortDescription: "Member of the Association of Singapore Marine Industries.",
+        longDescription: "As an associate member of the Association of Singapore Marine Industries (ASMI), we are an active participant in Singapore's dynamic marine and offshore engineering ecosystem. This membership reflects our commitment to supporting the industry's growth and upholding the highest standards of service and professionalism.",
+        icon: Building2,
     }
 ];
