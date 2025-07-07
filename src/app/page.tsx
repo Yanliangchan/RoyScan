@@ -3,6 +3,7 @@ import { services, certifications } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Users, BadgeCheck, Atom } from "lucide-react";
 
 const whyChooseUs = [
@@ -31,17 +32,29 @@ export default function Home() {
       
       <section id="about-us" className="bg-background">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Your Partner in Engineering Integrity</h2>
-            <div className="mt-6 space-y-4 text-lg text-muted-foreground">
-              <p>
-                Incorporated in 1997, Royscan Engineering Pte Ltd provides quality and reliable Non-Destructive Examination (NDE) to a wide range of industries including Shipyards, Petrochemicals, Fabrication, Construction and Manufacturing.
-              </p>
-              <p>
-                With competent and professionally qualified specialists and technicians, we maintain our mission of being a highly efficient and dependable service, providing quality examination services and reliable results. We aim to be your best choice for services in NDE and PWHT.
-              </p>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-4">
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Your Partner in Engineering Integrity</h2>
+                    <div className="space-y-4 text-lg text-muted-foreground">
+                        <p>
+                            Incorporated in 1997, Royscan Engineering Pte Ltd provides quality and reliable Non-Destructive Examination (NDE) to a wide range of industries including Shipyards, Petrochemicals, Fabrication, Construction and Manufacturing.
+                        </p>
+                        <p>
+                            With competent and professionally qualified specialists and technicians, we maintain our mission of being a highly efficient and dependable service, providing quality examination services and reliable results. We aim to be your best choice for services in NDE and PWHT.
+                        </p>
+                    </div>
+                </div>
+                <div className="flex justify-center">
+                    <Image
+                        src="https://placehold.co/600x450.png"
+                        alt="Engineers collaborating on a project"
+                        data-ai-hint="engineers collaboration"
+                        width={600}
+                        height={450}
+                        className="rounded-lg shadow-xl"
+                    />
+                </div>
             </div>
-          </div>
         </div>
       </section>
 

@@ -22,7 +22,7 @@ export default function HeroSection() {
             Premier NDE & Inspection Services
           </h1>
           <p className="max-w-[600px] mx-auto text-foreground/80 md:text-xl">
-            Royscan Engineering delivers unparalleled Non-Destructive Testing solutions, ensuring the integrity and safety of your critical assets with cutting-edge technology and expert analysis.
+            Ensuring the integrity and safety of your critical assets with cutting-edge technology and expert analysis.
           </p>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
