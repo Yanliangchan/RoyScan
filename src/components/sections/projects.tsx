@@ -1,4 +1,4 @@
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
     Building, 
     Ship, 
@@ -49,6 +49,15 @@ const projectsList = [
     { title: "REFLECTIONS AT KEPPEL BAY - CONDOMINIUM PROJECT", client: "TTJ DESIGN AND ENGINEERING PTE LTD", icon: Building },
 ];
 
+const groupedProjects = projectsList.reduce((acc, project) => {
+    if (!acc[project.client]) {
+        acc[project.client] = [];
+    }
+    acc[project.client].push({ title: project.title, icon: project.icon });
+    return acc;
+}, {} as Record<string, { title: string; icon: any }[]>);
+
+
 export default function ProjectsSection() {
   return (
     <section id="projects">
@@ -56,21 +65,32 @@ export default function ProjectsSection() {
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Our Key Projects</h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
-            A glimpse into the diverse and critical projects we've successfully undertaken.
+            A glimpse into the diverse and critical projects we've successfully undertaken for our valued clients.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
-          {projectsList.map((project, index) => (
-            <Card key={`${project.title}-${index}`} className="overflow-hidden transition-all hover:shadow-xl flex flex-col sm:flex-row items-center">
-                <div className="p-6 bg-primary/10 w-full sm:w-auto self-stretch flex items-center justify-center">
-                    <project.icon className="h-12 w-12 text-primary mx-auto"/>
-                </div>
-              <CardContent className="p-6 flex-1">
-                <CardTitle className="font-headline text-xl mb-2">{project.title}</CardTitle>
-                <p className="text-muted-foreground">Client: <span className="font-medium text-foreground">{project.client}</span></p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
+            {Object.entries(groupedProjects).map(([client, projects]) => (
+                <Card key={client} className="flex flex-col transition-all hover:shadow-lg">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-xl flex items-center gap-3">
+                            <Building2 className="h-6 w-6 text-primary flex-shrink-0" />
+                            {client}
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0 flex-grow">
+                        <ul className="space-y-4">
+                            {projects.map((project, index) => (
+                                <li key={`${project.title}-${index}`} className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 w-6 flex justify-center">
+                                     <project.icon className="h-6 w-6 text-muted-foreground mt-0.5" />
+                                    </div>
+                                    <span className="text-foreground/90">{project.title}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </CardContent>
+                </Card>
+            ))}
         </div>
       </div>
     </section>
