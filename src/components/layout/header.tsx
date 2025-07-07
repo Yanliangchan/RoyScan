@@ -15,6 +15,37 @@ const navLinks = [
   { href: '/team', label: 'Our Team' },
 ];
 
+const Logo = () => (
+  <svg
+    className="h-8 w-8"
+    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <ellipse
+      cx="50"
+      cy="50"
+      rx="48"
+      ry="45"
+      stroke="#D42A2A"
+      strokeWidth="4"
+      fill="none"
+    />
+    <text
+      x="50%"
+      y="50%"
+      dominantBaseline="middle"
+      textAnchor="middle"
+      fill="hsl(var(--primary))"
+      fontSize="40"
+      fontWeight="bold"
+      fontFamily="Space Grotesk, sans-serif"
+    >
+      RS
+    </text>
+  </svg>
+);
+
+
 export default function AppHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,16 +68,7 @@ export default function AppHeader() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
-          <svg
-            className="h-8 w-8"
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="50" cy="50" r="50" fill="#D42A2A" />
-            <circle cx="50" cy="50" r="33" fill="white" />
-            <circle cx="50" cy="50" r="17" fill="hsl(var(--primary))" />
-          </svg>
+          <Logo />
           <span className="text-xl font-bold font-headline text-primary">Royscan Engineering</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
@@ -74,16 +96,7 @@ export default function AppHeader() {
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
-                  <svg
-                    className="h-8 w-8"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="50" cy="50" r="50" fill="#D42A2A" />
-                    <circle cx="50" cy="50" r="33" fill="white" />
-                    <circle cx="50" cy="50" r="17" fill="hsl(var(--primary))" />
-                  </svg>
+                  <Logo />
                   <span className="text-xl font-bold font-headline text-primary">Royscan Engineering</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
