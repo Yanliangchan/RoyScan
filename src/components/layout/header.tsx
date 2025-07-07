@@ -17,18 +17,18 @@ const navLinks = [
 
 const Logo = () => (
   <svg
-    className="h-8 w-8"
-    viewBox="0 0 100 100"
+    className="h-8 w-auto"
+    viewBox="0 0 108 70"
     xmlns="http://www.w3.org/2000/svg"
   >
     <ellipse
-      cx="50"
-      cy="50"
-      rx="48"
-      ry="45"
-      stroke="hsl(var(--primary))"
-      strokeWidth="4"
-      fill="none"
+      cx="54"
+      cy="35"
+      rx="50"
+      ry="32"
+      stroke="hsl(var(--destructive))"
+      strokeWidth="5"
+      fill="white"
     />
     <text
       x="50%"
