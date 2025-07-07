@@ -44,8 +44,8 @@ export default function AppHeader() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle cx="50" cy="50" r="50" fill="#D42A2A" />
-            <circle cx="50" cy="50" r="25" fill="white" />
-            <circle cx="50" cy="50" r="15" fill="hsl(var(--primary))" />
+            <circle cx="50" cy="50" r="33" fill="white" />
+            <circle cx="50" cy="50" r="17" fill="hsl(var(--primary))" />
           </svg>
           <span className="text-xl font-bold font-headline text-primary">Royscan Engineering</span>
         </Link>
@@ -81,8 +81,8 @@ export default function AppHeader() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <circle cx="50" cy="50" r="50" fill="#D42A2A" />
-                    <circle cx="50" cy="50" r="25" fill="white" />
-                    <circle cx="50" cy="50" r="15" fill="hsl(var(--primary))" />
+                    <circle cx="50" cy="50" r="33" fill="white" />
+                    <circle cx="50" cy="50" r="17" fill="hsl(var(--primary))" />
                   </svg>
                   <span className="text-xl font-bold font-headline text-primary">Royscan Engineering</span>
                 </Link>
