@@ -29,7 +29,23 @@ export default function Home() {
     <>
       <HeroSection />
       
-      <section id="home-services" className="bg-background">
+      <section id="about-us" className="bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Your Partner in Engineering Integrity</h2>
+            <div className="mt-6 space-y-4 text-lg text-muted-foreground">
+              <p>
+                Incorporated in 1997, Royscan Engineering Pte Ltd provides quality and reliable Non-Destructive Examination (NDE) to a wide range of industries including Shipyards, Petrochemicals, Fabrication, Construction and Manufacturing.
+              </p>
+              <p>
+                With competent and professionally qualified specialists and technicians, we maintain our mission of being a highly efficient and dependable service, providing quality examination services and reliable results. We aim to be your best choice for services in NDE and PWHT.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="home-services" className="bg-muted">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Our Core Services</h2>
@@ -62,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-choose-us" className="bg-muted">
+      <section id="why-choose-us" className="bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Why Royscan Engineering?</h2>
