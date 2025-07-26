@@ -46,7 +46,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-center">
                     <Image
-                        src="https://firebasestudio-hosting.web.app/projects/eMPxemqX/images/3m7a4j6t.png"
+                        src="https://firebasestudio-hosting.web.app/projects/eMPxemqX/images/j81uypj1.jpeg"
                         alt="Engineers collaborating on a project"
                         data-ai-hint="engineers inspection"
                         width={600}
